@@ -1,0 +1,273 @@
+:root {
+  --white: #ffffff;
+  --black: #160d02;
+  --dark-gray: oklch(26.9% 0 0);
+  --light-gray: oklch(92% 0.004 286.32);
+  --light-blue: oklch(60.9% 0.126 221.723);
+  --blue: oklch(54.6% 0.245 262.881);
+  --green: oklch(72.3% 0.219 149.579);
+  --yellow: oklch(90.5% 0.182 98.111);
+  --red: oklch(57.7% 0.245 27.325);
+  --purple: oklch(54.1% 0.281 293.009);
+  --default-border: 1px solid var(--black);
+  --fonts: Hack, monospace;
+  --default-pad: 0.6em;
+  /* ANIMATION TIMINGS */
+  --anim-base-slide-time: 0.3s;
+  --anim-importance-delay: 0.1s;
+  /* DEFAULTS FOR WHOLE DOCUMENT */
+  font-family: var(--fonts);
+  font-size: larger;
+}
+
+@font-face {
+  font-family: "Martius";
+  src: url("/public/Martius-LV9L4.ttf") format("truetype");
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: var(--light-blue);
+}
+
+a:hover{
+  font-weight: bold;
+}
+
+a:visited {
+  color: var(--purple);
+}
+
+abbr {
+  font-weight: bold;
+}
+
+address {
+  font-style: unset;
+}
+
+aside {
+  width: 40%;
+  float: right;
+  border: var(--default-border);
+  padding: var(--default-pad);
+}
+
+button {
+  border: unset;
+  border-radius: unset;
+  background-color: unset;
+  font-family: var(--fonts);
+  font-size: medium;
+  text-transform: uppercase;
+  padding: var(--default-pad);
+}
+
+button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+caption {
+  caption-side: bottom;
+}
+
+code {
+  background-color: var(--light-gray);
+  padding: calc(var(--default-pad) / 2);
+  font-size: larger;
+}
+
+details {
+  padding: var(--default-pad);
+}
+
+del, del * {
+  background-color: inherit;
+}
+
+dt {
+  font-style: italic;
+  padding: var(--default-pad);
+}
+
+footer {
+  border-top: var(--default-border);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Martius';
+  text-transform: uppercase;
+  padding: var(--default-pad);
+}
+
+h1 {
+  animation: slide-from-right calc(var(--anim-base-slide-time) + 1 * var(--anim-importance-delay)) forwards;
+}
+
+h1:nth-child(1) {
+  margin-top: 0;
+  animation: slide-from-right var(--anim-base-slide-time) forwards;
+}
+
+h2 {
+  animation: slide-from-right calc(var(--anim-base-slide-time) + 2 * var(--anim-importance-delay)) forwards;
+}
+
+h3 {
+  animation: slide-from-right calc(var(--anim-base-slide-time) + 3 * var(--anim-importance-delay)) forwards;
+}
+
+h4 {
+  animation: slide-from-right calc(var(--anim-base-slide-time) + 4 * var(--anim-importance-delay)) forwards;
+}
+
+h5 {
+  animation: slide-from-right calc(var(--anim-base-slide-time) + 5 * var(--anim-importance-delay)) forwards;
+}
+
+h6 {
+  animation: slide-from-right calc(var(--anim-base-slide-time) + 6 * var(--anim-importance-delay)) forwards;
+}
+
+input {
+  border: unset;
+  border-radius: unset;
+  outline: unset;
+  font-family: var(--fonts);
+  font-size: medium;
+  padding: var(--default-pad);
+  color: var(--dark-gray);
+  text-decoration: underline;
+}
+
+input:focus {
+  border: unset;
+  border-radius: unset;
+  outline: unset;
+  font-size: medium;
+}
+
+ins, ins * {
+  background-color: inherit;
+}
+
+kbd {
+  font-size: x-large;
+}
+
+label {
+  padding: var(--default-pad);
+}
+
+mark {
+  background-color: var(--yellow);
+}
+
+menu li {
+  list-style-type: none;
+}
+
+meter {
+  border-radius: unset;
+  border: var(--default-border);
+  background-color: unset;
+  box-shadow: 0;
+  background: none;
+}
+
+meter::-webkit-meter-bar, meter::-webkit-meter-optimum-value {
+    background: none;
+}
+
+meter::-moz-meter-bar, meter::-webkit-meter-optimum-value {
+  background: none;
+  background-color: var(--black);
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a::after {
+    content: " >";
+    padding-right: var(--default-pad);
+}
+
+ol li {
+  list-style-type:decimal-leading-zero;
+  list-style-position: inside;
+}
+
+p {
+  padding: var(--default-pad);
+}
+
+summary {
+  padding: var(--default-pad);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,td {
+  padding: var(--default-pad);
+}
+
+ul li {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+/* COLOR CLASSES */
+
+.black {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.blue {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.green {
+  background-color: var(--green);
+  color: var(--black);
+}
+
+.yellow {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.red {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+/* VARIANTS */
+.bordered {
+  border: var(--default-border);
+}
+
+table.bordered th, table.bordered td {
+  border: var(--default-border);
+}
+
+/* ANIMATIONS */
+
+@keyframes slide-from-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
