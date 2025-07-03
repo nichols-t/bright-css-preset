@@ -1,13 +1,197 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css"
+    integrity="sha512-XgCw4Srl8lC1ECwcaHwAU0WnxQwHkqmInzg9wJLtGB7DRuMaXPuK2k9WJ2AwRDGdrgK9eJpZl2hUlLi2WQssmw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Bright CSS</title>
+</head>
+
+<body>
+  <header>
+    <hgroup>
+      <h1 class="blue">bright css preset</h1>
+      <h2>just css stuff</h2>
+      <h3>0.0.1</h3>
+    </hgroup>
+  </header>
+  <section>
+    <h2>What</h2>
+    <p>
+      A CSS stylesheet. This page is mostly unstructured text with various HTML elements.
+    </p>
+    <p>Fonts used are <a href="https://github.com/source-foundry/Hack/tree/master" target="_blank">Hack</a>
+      and <a href="https://ggbot.itch.io/martius-font" target="_blank">Martius</a>.</p>
+  </section>
+  <section>
+    <h2 class="green">Things To Do</h2>
+    <ul>
+      <li>See if there's a solution for native elements (probably not)</li>
+      <li>Organize the examples on this page</li>
+      <li>Test flex, grid etc to see if things seem reasonable</li>
+      <li>Explore additional variant classes to do fun things</li>
+      <li>See if there's a more unified idea for the default animations</li>
+      <li>Finish form input styling (as far as possible, anyway)</li>
+      <li>Complete the color set</li>
+    </ul>
+  </section>
+  <button class="black">click me to do nothing!</button>
+  <br />
+  <p>
+    <abbr>Sed</abbr> ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+    rem aperiam,
+    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+    voluptatem
+    quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+    sequi nesciunt.
+    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+    eius modi tempora
+    incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+    exercitationem ullam corporis
+    suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+    voluptate velit
+    esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    </div>
+    <br />
+    <code>This is source code (N95s required, vile stuff)</code>
+    <br />
+  <p>Following are some definitions.</p>
+  <dl>
+    <dt>Size 2 Fish</dt>
+    <dd>These are caught only by the most skilled of fishermen</dd>
+  </dl>
+  <p>There is some text <del class="red">Deleted</del> here</p>
+  <p>
+    Some text is:
+    <del class="red">
+      <p>Deleted text (this isn't working quite right)</p>
+    </del>
+    <ins class="green">
+      <p>Inserted text</p>
+    </ins>
+  </p>
+  <p>Press <kbd>DIE</kbd> to die instantly.</p>
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
+
+    <input type="radio" id="sasquatch" name="monster" value="S" />
+    <label for="sasquatch">Sasquatch</label><br />
+
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+  </fieldset>
+
+  <details>
+    <summary>Detail Summary</summary>
+    There are some dragons nearby.
+  </details>
+  <p>A <dfn>Dfn</dfn> is for defining things</p>
+  <dl>
+    <dt>A</dt>
+    <dd>The letter A</dd>
+    <dt>B</dt>
+    <dd>The letter B</dd>
+  </dl>
+  <p>Me when I <em>emphasize</em></p>
+  <figure>
+    The wall
+    <figcaption>meow</figcaption>
+  </figure>
+  <p>Another paragraph, this time with <i>i</i></p>
+  <ul>
+    <li>An element</li>
+    <li>Another element</li>
+  </ul>
+  <ol>
+    <li>An elem</li>
+    <li>another</li>
+  </ol>
+  <p>THINK, <mark>Mark!</mark></p>
+  <menu>
+    <li><button>One</button></li>
+    <li><button>Two</button></li>
+  </menu>
+  <p>The meter, which is probably incomplete:</p>
+  <meter id="fuel" min="0" max="100" low={33} high={66} optimum={80} value="50"></meter>
+  <br />
+  <nav>
+    <ol>
+      <li><a href="#">Bikes</a></li>
+      <li><a href="#">BMX</a></li>
+      <li>Jump Bike 3000</li>
+    </ol>
+  </nav>
+  <form>
+    <label for="dino-select">Choose a dinosaur:</label>
+    <select class="bordered" id="dino-select">
+      <optgroup label="Theropods">
+        <option>Tyrannosaurus</option>
+        <option>Velociraptor</option>
+        <option>Deinonychus</option>
+      </optgroup>
+      <optgroup label="Sauropods">
+        <option>Diplodocus</option>
+        <option>Saltasaurus</option>
+        <option>Apatosaurus</option>
+      </optgroup>
+    </select>
+  </form>
+  <p>There is some <small>small text here</small></p>
+  <p>Yellow <sub>sub</sub>marine <sup>SOUP</sup>erman</p>
+  <table class="bordered">
+    <caption>Caption, a table</caption>
+    <tr>
+      <th>
+        One
+      </th>
+      <th>
+        Two
+      </th>
+      <th>
+        Three
+      </th>
+    </tr>
+    <tbody>
+      <tr>
+        <td>
+          Datum 1
+        </td>
+        <td>Something is probably supposed to be here</td>
+        <td><button class="yellow">destroy</button></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>
+          f1
+        </td>
+        <td>
+          f2
+        </td>
+        <td>
+          f3
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+  <form>
+    <label for="my-textarea">The text editor:</label>
+    <textarea rows={5} cols={33} id="my-textarea"></textarea>
+  </form>
+  <p><time dateTime="2020-01-01">Time</time> is a <u>human construct</u></p>
+  <p>Let <var>x</var> be something that nobody understands</p>
+  <footer>
+    <p>Created by someone with too much time</p>
+    <address>
+      <a href="https://www.tynichols.com">Homepage</a>
+    </address>
+  </footer>
+</body>
+
 </html>

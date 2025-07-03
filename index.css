@@ -20,9 +20,15 @@
   font-size: larger;
 }
 
+/* FONT for HEADER */
 @font-face {
   font-family: "Martius";
-  src: url("/public/Martius-LV9L4.ttf") format("truetype");
+  src: url("public/Martius-LV9L4.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hack";
+  src: url() format("truetype");
 }
 
 body {
@@ -54,7 +60,6 @@ address {
 aside {
   width: 40%;
   float: right;
-  border: var(--default-border);
   padding: var(--default-pad);
 }
 
@@ -99,6 +104,9 @@ dt {
 footer {
   border-top: var(--default-border);
 }
+
+/* HEADERS */
+/* I could probably be smarter about the way I'm doing animations */
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Martius';
@@ -212,6 +220,14 @@ p {
   padding: var(--default-pad);
 }
 
+select {
+  background-color: unset;
+  padding: var(--default-pad);
+  border: var(--default-border);
+  font-family: var(--fonts);
+  font-size: large;
+}
+
 summary {
   padding: var(--default-pad);
 }
@@ -220,8 +236,23 @@ table {
   border-collapse: collapse;
 }
 
+textarea {
+  font-size: x-large;
+  box-sizing: border-box;
+  border-radius: 0;
+  border: var(--default-border);
+}
+
+textarea:focus-visible, textarea:visited {
+  outline: var(--default-border);
+}
+
 th,td {
   padding: var(--default-pad);
+}
+
+u {
+  text-decoration: var(--red) underline;
 }
 
 ul li {
@@ -261,12 +292,12 @@ ul li {
   border: var(--default-border);
 }
 
+
 table.bordered th, table.bordered td {
   border: var(--default-border);
 }
 
 /* ANIMATIONS */
-
 @keyframes slide-from-right {
   0% { transform: translateX(100%); }
   100% { transform: translateX(0%); }
