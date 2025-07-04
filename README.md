@@ -1,4 +1,4 @@
-# Components
+# Bright CSS
 
 A CSS preset.
 
